@@ -18,7 +18,7 @@ This repo is simply a homework assignment. Feel free to inspect the code and not
 - Inspection Observer
 
 ## Updates
-This portfolio includes new projects! Visit Stretch-n-Strengthen to view my first ever Full Stack Website, deployed on Heroku. Additionally, I've incorporated CSS Variables to make color switching more easier. Lastly, I have updated my Credits / Resources to include new sources.
+This portfolio includes new projects! Visit Stretch-n-Strengthen to view my first ever Full Stack Website, deployed on Heroku. Additionally, I've incorporated CSS Variables to make color switching more easier. The biggest change is the color scheme. I refactored bad class names to utilize CSS variables, so now all the colors are at the `:root` rather than scattered throughout the code. Lastly, I have updated my Credits / Resources to include new sources.
   
 ## Credits
 [YouTube, Kevin Powell Series on CSS Variables](https://www.youtube.com/watch?v=PHO6TBq_auI)
