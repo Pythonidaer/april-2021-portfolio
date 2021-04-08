@@ -1,0 +1,291 @@
+/* CSS Variables */
+:root {
+    --dark: #22162b;
+    --light: #702dd5;
+    --body: #bfdbf7;
+    --dark-hover: rgba(34, 22, 43, .7);
+    --white: #fff;
+
+/*
+Green Design System
+    --dark: #1F6138;
+    --light: #3abb67;
+    --hamburger-hover: rgba(58, 187, 103, .05);
+    --white: #fff;
+*/
+}
+
+body {
+    background: var(--body) !important;
+}
+
+.is-dark-nav {
+    background-color: var(--dark);
+}
+
+.navbar-burger, 
+.navbar-burger:hover, 
+.navbar-burger:focus {
+    color: var(--white);
+}
+
+.navbar-burger:hover, 
+.navbar-burger:focus {
+    background-color: var(--dark-hover);
+}
+
+.navbar.has-shadow {
+    box-shadow: none;
+}
+
+.navbar-item {
+    background: var(--dark);
+    color: var(--white);
+}
+
+.navbar-end>a.navbar-item:hover,
+.navbar-end>a.navbar-item:focus {
+    background: var(--light);
+    color: var(--white);
+}
+
+.navbar-menu.is-active {
+    background: var(--body);
+}
+
+p {
+    line-height: 1.5;
+}
+
+code {
+    background-color: #f8c630 !important;
+}
+
+/* clean up margin overflow on mobile */
+.columns {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+.centered-sections {
+  margin: 0 auto;  
+}
+
+/* added spacing on larger screens for white space and readability */
+.welcomesection {
+    padding-top: 5rem;
+}
+
+
+/* INTERSECTION OBSERVER START */
+/* top sections fade in on scroll (most likely will appear immediately) */
+.topsections {
+    opacity: 0;
+    transition: opacity 1000ms ease-in;
+}
+
+.topsections.appear {
+    opacity: 1;
+}
+
+/* tab section will slide and fade in from left on scroll */
+.from-left {
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: transform 800ms ease-in, opacity 1000ms ease-in;
+}
+
+.from-left.appear {
+    transform: translateX(0);
+    opacity: 1;
+}
+/* INTERSECTION OBSERVER END */
+
+.card-left {
+    margin-left: auto;
+}
+
+.card-right {
+    margin-right: auto;
+}
+
+#tab-content-2 {
+    color: var(--dark);
+}
+
+.description-title {
+    padding-bottom: 1px;
+    border-bottom: 1px solid var(--dark);
+}
+
+
+/* make smoother transition for figure box on screen size change */
+figure {
+    margin: 0 auto;
+    transition: all .3s linear;
+}
+
+/* make contact box light success green */
+.column.contact.is-four-fifths {
+    background: var(--light);
+}
+
+/* make contact info section have less padding */
+.selfsection {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* make list items readable */
+ul.is-flex li a {
+    color: var(--white);
+}
+ 
+/* make contact links pop out more like a button */
+.selflinks ul li {
+    background-color: var(--dark);
+    color: var(--white);
+    font-weight: bold;
+    border-radius: 5px;
+    line-height: 1.5;
+    padding: .25rem .38rem;
+    transition: all .3s linear;
+}
+
+/* add hover to contact buttons */
+.selflinks ul li:hover, 
+.selflinks ul li:focus {
+    background: var(--light);
+}
+
+.tabs ul {
+    border-color: var(--dark);
+}
+
+.tabs.is-boxed li.is-active a {
+    border-color: var(--dark);
+    /* color: var(--dark) !important; */
+    color: var(--white) !important;
+    background-color: var(--dark) !important;
+    /* background-color: var(--body) !important; */
+}
+
+.tabs.is-boxed a:hover,
+.tabs.is-boxed a:focus {
+    /* background: var(--dark); */
+    background: var(--dark-hover);
+    color: var(--white) !important;
+}
+
+.has-text-dark-custom {
+    color: var(--dark);
+}
+
+/* add hover to card buttons to resemble top links */
+.card-footer-item a {
+    background-color: var(--dark);
+    color: var(--white);
+    font-weight: bold;
+    border-radius: 5px;
+    line-height: 1.5;
+    padding: .5rem .75rem;
+    transition: all .3s linear;
+}
+
+.card-footer-item a:hover,
+.card-footer-item a:focus {
+    background: var(--light);
+}
+
+
+/* MEDIA QUERIES */
+/* adjust spacing and font size for polished mobile UI */
+@media all and (max-width: 450px) {
+    .welcomesection {
+        padding-top: 3rem;
+    }
+
+    ul.is-flex li a {
+        font-size: 12px;
+    }
+
+    .columns > .column > .columns > .column {
+        padding: 0;
+    }
+
+    .selflinks {
+        padding: 0 !important;
+    }
+
+    .selfsection {
+        padding: 0;
+    }
+
+    .is-mobile > .selfsection > .column {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* making selfie smaller adds to mobile responsiveness */
+    .selfimage {
+        width: 128px;
+    }
+
+    #tab-content-2 {
+        margin-left: 0 !important;
+        padding: 0;
+    }
+}
+
+@media all and (max-width: 320px) {
+    .selfimage {
+        width: 96px;
+    }
+
+    ul.is-flex li a {
+        font-size: 10px;
+    }
+}
+
+@media all and (max-width: 768px) {
+    a.navbar-item {
+        background-color: var(--dark);
+        margin: 0 .5rem .5rem 0;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+
+    a.navbar-item:last-of-type {
+        margin-bottom: 0;
+    }
+    
+    a.navbar-item:hover, 
+    a.navbar-item:focus {
+        background-color: var(--light);
+        color: var(--white);
+        font-weight: bold;
+        border-radius: 5px;
+    }
+}
+
+/* image can be larger for non-mobile devices */
+@media all and (min-width: 768px) {
+    .selfimage {
+        width: 256px;
+    }
+
+    /* increase UL box for list items to be closer to top and bottom of image */
+    ul.is-flex.is-flex-direction-column {
+        height: 200px;
+    }
+
+    ul.is-flex li {
+        margin: 0; 
+    }
+
+    ul.is-flex li a {
+        font-size: 20px;
+    }
+}

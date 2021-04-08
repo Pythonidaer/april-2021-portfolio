@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Jonnovative Designs is a website created by Jonathan Hammond. Find me on LinkedIn!: /jonamichahammo">
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <title>Jonnovative Designs</title>
+</head>
+<!-- fixes navbar to the body top -->
+
+<body class="has-navbar-fixed-top">
+  <!-- Bulma Navigation component -->
+  <nav class="navbar is-dark-nav is-fixed-top has-shadow">
+    <div class="navbar-brand">
+      <p class="navbar-item has-text-weight-bold">
+        <a href="https://www.linkedin.com/in/jonamichahammo/" target="_blank" title="Add me on LinkedIn!" rel="noopener"
+          class="has-text-white">Jonnovative Designs</a>
+      </p>
+      <a class="navbar-burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </div>
+
+    <!-- when #burger is clicked, these nav-items will appear -->
+    <div class="navbar-menu" id="nav-links">
+      <div class="navbar-end">
+        <!-- when scroll nav-items clicked, they will scroll to each anchor -->
+        <a class="navbar-item scroll" href="#home">Home</a>
+        <a class="navbar-item scroll" href="#portfolio">Portfolio</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Basic welcome section utilizing some Bulma classes -->
+  <section class="section pb-6 welcomesection topsections" id="home">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-four-fifths centered-sections px-0">
+          <h1 class="title">Welcome!</h1>
+          <h2 class="subtitle">Portfolio made with ❤️ and Bulma CSS</h2>
+          <p class="is-size-6 mb-5">My name is Jonathan Hammond. I want to become a full-time web developer. This
+            instance of my portfolio reflects projects I have worked on, as well as new skills I have acquired during a
+            half-year coding bootcamp through the University of New Hampshire.</p>
+          <p class="is-size-6">Below, you will find brief descriptions, along with links, to my three best (and most
+            current) projects. You are invited to visit my <em>Stretch-n-Strengthen</em>, <em>Easy Recipeazy</em>, and
+            <em>Coding Quiz</em> creations. If you would like to hire me or reach out in general, I have provided all of
+            my contact information below. I encourage you to do so - my response time is less than a week! Anyway,
+            stay safe and take care.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lots of cool features here! each item has a title and special feature -->
+  <section class="section selfsection topsections">
+    <div class="container">
+      <div class="columns my-0">
+        <div class="column contact is-four-fifths centered-sections px-0">
+          <div class="columns is-vcentered is-mobile py-4">
+            <div class="column pr-0 py-0 selflinks">
+              <ul
+                class="is-flex is-flex-direction-column is-vcentered is-align-items-flex-end is-justify-content-space-between py-3">
+                <li class="mb-3"><a href="https://github.com/Pythonidaer" target="_blank"
+                    title="View my code repositories" rel="noopener">Github</a></li>
+                <li class="mb-3 mr-3"><a href="https://www.linkedin.com/in/jonamichahammo/" target="_blank"
+                    title="Click to connect" rel="noopener">LinkedIn</a></li>
+                <li><a href="https://pythonidaer.github.io/jonnovative-portfolio/JonathanHammondResume.pdf" download
+                    title="Click to download pdf" rel="noopener">Resume</a></li>
+              </ul>
+            </div>
+            <div class="column">
+              <!-- I want this to change size depending on viewport width -->
+              <figure class="image selfimage">
+                <img src="assets/images/selfimage.jpg" class="is-rounded" alt="Sideview portrait of Jonathan Hammond">
+              </figure>
+            </div>
+            <div class="column pl-0 py-0 selflinks">
+              <ul
+                class="is-flex is-flex-direction-column is-vcentered is-align-items-flex-start is-justify-content-space-between py-3">
+                <li class="mb-3"><a href="https://twitter.com/jonamichahammo" target="_blank"
+                    title="Twitter: @jonamichahammo" rel="noopener">Jon Hammond</a></li>
+                <li class="mb-3 ml-3"><a href="mailto:codefolio.work@gmail.com?" target="_blank" subject="subject text"
+                    title="codefolio.work@gmail.com" rel="noopener">Gmail</a></li>
+                <li><a href="tel:978-854-3243" title="Cell Number" rel="noopener">978-854-3243</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bulma Card components stored in Bulma Tab component -->
+  <section class="section pt-7 from-left" id="portfolio">
+    <div class="container">
+      <div class="columns">
+        <!-- centers the component(s) && tabs start -->
+        <div class="column is-two-fifths card-left px-0">
+          <div class="tabs is-boxed is-centered">
+            <!-- literal tabs start -->
+            <ul>
+              <li class="is-active" data-target="coding-quiz">
+                <a class="has-text-black-ter tab-link" href="#">Project 1</a>
+              </li>
+              <li data-target="easy-recipeazy">
+                <a class="has-text-black-ter tab-link" href="#">Project 2</a>
+              </li>
+              <li data-target="password-generator">
+                <a class="has-text-black-ter tab-link" href="#">Project 3</a>
+              </li>
+            </ul>
+          </div>
+          <div class="px-2" id="tab-content">
+            <!-- corresponding tab card content 1 -->
+            <div id="coding-quiz">
+              <div class="card">
+                <div class="card-image has-text-centered px-4 pt-4">
+                  <figure class="image is-square">
+                    <a href="http://stretch-n-strengthen.herokuapp.com/" target="_blank" rel="noopener">
+                      <img src="assets/images/p2.png" alt="JavaScript Password Generator Screenshot">
+                    </a>
+                  </figure>
+                </div>
+                <div class="card-content">
+                  <p class="title is-size-5 has-text-centered has-text-dark-custom">Stretch-n-Strengthen</p>
+                </div>
+                <footer class="card-footer">
+                  <p class="card-footer-item">
+                    <a href="http://stretch-n-strengthen.herokuapp.com/" class="mr-5" target="_blank"
+                      rel="noopener">Website</a>
+                    <a href="https://github.com/crrmarchese/stretch-n-strengthen" target="_blank" rel="noopener">View
+                      Code</a>
+                  </p>
+                </footer>
+              </div>
+            </div>
+            <!-- corresponding tab card content 2 -->
+            <div id="easy-recipeazy" class="is-hidden">
+              <div class="card">
+                <div class="card-image has-text-centered px-4 pt-4">
+                  <figure class="image is-square">
+                    <a href="https://tonipow3ll.github.io/drinks-and-dinner/" target="_blank" rel="noopener">
+                      <img src="assets/images/p1.png" alt="Meal and Drink Generator Screenshot">
+                    </a>
+                  </figure>
+                </div>
+                <div class="card-content">
+                  <p class="title is-size-5 has-text-centered has-text-dark-custom">Easy Recipeazy</p>
+                </div>
+                <footer class="card-footer">
+                  <p class="card-footer-item">
+                    <a href="https://tonipow3ll.github.io/drinks-and-dinner/" target="_blank" class="mr-5"
+                      rel="noopener">Website</a>
+                    <a href="https://github.com/tonipow3ll/drinks-and-dinner" target="_blank" rel="noopener">View
+                      Code</a>
+                  </p>
+                </footer>
+              </div>
+            </div>
+
+            <!-- corresponding tab card content 3 -->
+            <div id="password-generator" class="is-hidden">
+              <div class="card">
+                <div class="card-image has-text-centered px-4 pt-4">
+                  <figure class="image is-square">
+                    <a href="https://pythonidaer.github.io/CodingQuiz/index.html" target="_blank" rel="noopener">
+                      <img src="assets/images/p3.png" alt="JavaScript Coding Quiz Screenshot">
+                    </a>
+                  </figure>
+                </div>
+                <div class="card-content">
+                  <p class="title is-size-5 has-text-centered has-text-dark-custom">Coding Quiz</p>
+                </div>
+                <footer class="card-footer">
+                  <p class="card-footer-item">
+                    <a href="https://pythonidaer.github.io/CodingQuiz/index.html" target="_blank" class="mr-5"
+                      rel="noopener">Website</a>
+                    <a href="https://github.com/Pythonidaer/CodingQuiz" target="_blank" rel="noopener">View Code</a>
+                  </p>
+                </footer>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- tabs end -->
+        <div class="column is-two-fifths card-right px-0">
+          <div class="px-2 ml-3" id="tab-content-2">
+            <!-- corresponding tab card content 1 -->
+            <div id="coding-quiz">
+              <h3 class="is-size-3 subtitle description-title">Stretch-n-Strengthen</h3>
+              <p class="mb-5">This was my first full-stack group project. I lead part of the front end team by learning
+                about and creating most of the handlebars web pages, as well as some of the express routes. I utilized
+                my cross-skill experience to communicate to the web designer how our project should look page-wise, as
+                well as on mobile. Including exercises and routines, I contributed a lot to the overall idea, with
+                absolute exception to the user dashboard and google auth logic.</p>
+              <p class="mb-5">This was my most challenging group project ever. I learned a lot about trust, and how
+                vital setting realistic expectations is in a group project. My biggest regret was simply not having
+                enough time to implement the use of an npm package called <a
+                  href="https://www.npmjs.com/package/fast-average-color" target="_blank"><em>fast average
+                    color</em></a>. The idea was to use this package to algorithmically extract colors from images
+                generated either from the exercise API or the user login logic, as we imported the user's Gmail image
+                onto the user profile dashboard. This would have dynamically set the background of a page according to
+                the image color, similar to how you see on Twitter when an image is loading. Regardless, I plan to use
+                this package during my first post-bootcamp project.</p>
+              <p class="mb-5">My biggest net gain from this project was learning about templating languages.</p>
+              <ul>
+                <p class="mb-1">Tools and Technologies Used:</p>
+                <li class="ml-4">Handlebars and Bulma CSS</li>
+                <li class="ml-4">Express, Sequelize and Google Auth</li>
+                <li class="ml-4">Heroku, GitHub, TablePlus and Postman</li>
+              </ul>
+            </div>
+            <!-- corresponding tab card content 2 -->
+            <div id="easy-recipeazy" class="is-hidden">
+              <h3 class="is-size-3 subtitle description-title">Easy Recipeazy</h3>
+              <p class="mb-5">This was a group project focused on user ingredient selection for a nice meal or alcoholic
+                beverage. Users click buttons to generate random meal/drink pairs, or individual meal and drink buttons.
+                Then things get interesting!</p>
+              <p class="mb-5">Users can filter by ingredient. Every ingredient option generates from positively resolved
+                <code>Promise</code> objects, which are stored and given one of 3 possible attributes. Users can select
+                one or more ingredients to increase the likelihood of finding a meal/drink with that item, or they can
+                click again to 'dislike' an ingredient, so that it filters out items with that ingredient.</p>
+              <p class="mb-5">Finally, below the cards are tabs (similar to the ones you see here holding Projects 1, 2,
+                and 3). Each tab contains either an ingredient or recipe for the meal and drink you are looking for.</p>
+              <ul>
+                <p class="mb-1">Tools and Technologies Used:</p>
+                <li class="ml-4">HTML and JavaScript</li>
+                <li class="ml-4">Bulma CSS Framework</li>
+                <li class="ml-4">Two APIs</li>
+                <li class="ml-4">GitHub and VSCode</li>
+              </ul>
+            </div>
+            <!-- corresponding tab card content 3 -->
+            <div id="password-generator" class="is-hidden">
+              <h3 class="is-size-3 subtitle description-title">Coding Quiz</h3>
+              <p class="mb-5">This homework introduced me to <code>setTimeout</code>, where I learned a lot about how
+                pages look underneath the hood. User's times go up or down depending on if they get questions right or
+                wrong. At the end of the game, remaining time becomes a user's high score. Users are prompted to enter
+                their initials, and validation will prompt them to re-enter information if they do not.</p>
+              <p class="mb-5">One challenge was keeping the quiz all to a single page. I did this by creating HTML
+                within the JavaScript and emptying element <code>.innerHTML</code> across various functions. I stored
+                questions within arrays, looped over their items and stored them into buttons, which was my favorite
+                part of the code.</p>
+              <p class="mb-5">This was my first time using <code>localStorage</code>. It took a lot of googling to
+                figure out how to get items from the local storage object and store them into an empty array. Now that
+                I've learned how to set and get items however, I look forward to using this functionality in future
+                projects.</p>
+              <ul>
+                <p class="mb-1">Tools and Technologies Used:</p>
+                <li class="ml-4">HTML and JavaScript</li>
+                <li class="ml-4">CSS 3</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="assets/scripts/behavior.js"></script>
+</body>
+
+</html>
+<!-- 
+    Spacing/Container notes:
+    section: 3rem 1.5rem;
+    container: max-width: 1152px; 960px; depends on width...
+
+    Font notes:
+    title
+    subtitle
+    is-size-1
+    is-size-2
+    is-size-3
+    is-size-4
+    is-size-5
+    is-size-6
+    is-size-7
+    is-uppercase 
+    is-italic
+    is-lowercase
+    has-text-left
+    has-text-right
+    has-text-centered
+    has-text-weight-light
+    has-text-weight-bold
+    has-text-info
+    has-text-light
+    has-text-dark
+    has-text-success
+    has-text-warning
+    has-text-primary
+    has-background-light
+    has-background-danger 
+    has-background-primary-dark
+ -->
