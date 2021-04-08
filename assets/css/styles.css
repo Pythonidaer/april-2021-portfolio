@@ -57,6 +57,14 @@ p {
     line-height: 1.5;
 }
 
+em, p, ul, li, .subtitle {
+    color: var(--dark) !important;
+}
+
+a, .subtitle {
+    font-weight: bold;
+}
+
 code {
     background-color: #f8c630 !important;
 }
